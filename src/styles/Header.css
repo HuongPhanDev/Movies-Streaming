@@ -1,0 +1,49 @@
+.header-container {
+    position: fixed;
+    width: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background-color: rgba(51, 51, 51, 0.5);
+    color: #fff;
+    margin: 0px;
+  }
+  
+.header-logo {
+width: 100px; 
+height: auto;
+}
+
+.header-nav {
+display: flex;
+gap: 40px;
+list-style: none;
+margin: 0;
+padding: 0;
+}
+
+.header-nav-item {
+text-decoration: none;
+color: #fff; 
+font-weight: 700;
+font-size: 14px;
+}
+
+
+.header-signin-button {
+background-color: #000000; 
+color: #e4d804; 
+border: 2px solid #e4d804;
+border-radius: 25px;
+padding: 10px 40px;
+cursor: pointer;
+}
+
+.header-signin-button a {
+text-decoration: none;
+color: white; 
+font-weight: 700;
+font-size: 14px;
+}
+  
