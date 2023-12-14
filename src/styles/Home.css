@@ -1,0 +1,17 @@
+.movieList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    
+}
+
+.upcomingMovie {
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/ucm_bg_shape.png");
+    color: white;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.upcomingMovie-section {
+    margin-top: 0px;
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/ucm_bg.jpg");
+}

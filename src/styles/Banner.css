@@ -1,7 +1,25 @@
 .bannerContainer {
     background-image: url("https://themebeyond.com/html/movflx/img/banner/banner_bg01.jpg");
-    width: 100%;
+    width: auto;
     height: 100vh;
     margin-top: 0px;
+    margin-bottom: 0px;
     background-repeat: no-repeat;
+    padding: 35vh 0px 0px 5%;
+}
+
+.bannerContainer h1 {
+    line-height: 0px;
+    color: #e4d804;
+    font-weight: 900;
+}
+.bannerContainer span {
+    color: #e4d804;
+}
+.bannerContainer p {
+    font-size: 60px;
+    width: 45%;
+    line-height: 10vh;
+    font-weight: 900;
+    color: white;
 }

@@ -1,0 +1,23 @@
+.buttonCommon {
+    background-color: #000000; 
+color: #e4d804; 
+border: 2px solid #e4d804;
+border-radius: 25px;
+padding: 10px 40px;
+cursor: pointer;
+}
+
+.buttonCommon a {
+    text-decoration: none;
+    color: white; 
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.buttonCommon:hover {
+    background-color: #e4d804;
+}
+
+.buttonCommon:hover a {
+    color: #000000;
+}

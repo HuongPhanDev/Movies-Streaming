@@ -5,7 +5,7 @@
     align-items: center;
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: rgba(51, 51, 51, 0.5);
+    transition: 0.3s ease;
     color: #fff;
     margin: 0px;
   }
@@ -47,3 +47,25 @@ font-weight: 700;
 font-size: 14px;
 }
   
+
+
+.is-sticky {
+  position: fixed;
+  top: 0;
+  background-color: rgba(51, 51, 51, 0.5);
+  box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
+  padding: 20px 40px;
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease;
+  animation: smoothScroll 1s ease-out;
+}
+
+@keyframes smoothScroll {
+  0% {
+    transform: translateY(-142px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}

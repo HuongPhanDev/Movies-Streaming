@@ -1,0 +1,14 @@
+.movieCard div {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+.movieCard img {
+    max-width: 100%;
+    height: auto;
+}
+.movieCard {
+    width: 20%;
+    margin: 5vh 0px 0px 3% ;
+    border: 1px solid black;
+}

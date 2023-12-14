@@ -7,18 +7,23 @@ import Pricing from './pages/Pricing';
 import TVShow from './pages/TVShow';
 import Login from './pages/Login';
 import PrivateRoute from './PrivateRouter';
+import { useState, useEffect} from 'react';
 
-const isLoggedIn = sessionStorage.getItem('isLoggedIn') == 'true';
 
+// const isLoggedIn = sessionStorage.getItem('isLoggedIn') == 'true';
+   
+   
 const UserRoutes = [
-    { path: "/", element: <Home/>},
-    { path: "/login", element: <Login/>},
-    { path: "/blog", element: <PrivateRoute isAuthenticated={isLoggedIn}><Contact/></PrivateRoute>},
-    { path: "/movie", element: <PrivateRoute isAuthenticated={isLoggedIn}><Movie/></PrivateRoute>},
-    { path: "/tvshow", element: <PrivateRoute isAuthenticated={isLoggedIn}><TVShow/></PrivateRoute>},
-    { path: "/contact", element: <Contact/>},
-    { path: "/pricing", element: <Pricing/>},
+    { path: "/", element: <Home/>, isPrivate: false},
+    { path: "/login", element: <Login/>,isPrivate: false },
+    { path: "/blog", element: <Blog/>, isPrivate: true},
+    { path: "/movie", element: <Movie/>, isPrivate: true},
+    { path: "/tvshow", element: <TVShow/>, isPrivate: false},
+    { path: "/contact", element: <Contact/>, isPrivate: false},
+    { path: "/pricing", element: <Pricing/>, isPrivate: false},
 ]
+
+
 
 export const routes = {
     UserRoutes
