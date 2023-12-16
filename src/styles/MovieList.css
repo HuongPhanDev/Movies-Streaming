@@ -1,0 +1,25 @@
+.movieSection {
+    padding: 10vh;
+}
+
+.smallTitle {
+    color: #e4d804;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.bigTitle {
+    font-size: 36px;
+    font-weight: 900;
+    color: white;
+    font-style: normal;
+}
+.movieList {
+    margin-top: 5vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    
+}

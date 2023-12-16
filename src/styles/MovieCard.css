@@ -1,14 +1,56 @@
+.movieCard {
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    border-radius: 8px;
+  }
 .movieCard div {
     display: flex;
     justify-content: space-between;
-    color: white;
+    margin-top: 5px;
 }
-.movieCard img {
-    max-width: 100%;
-    height: auto;
+
+.poster {
+width: 100%; 
+height: auto;
+margin-right: 10px;
+border-radius: 5px;
 }
-.movieCard {
-    width: 20%;
-    margin: 5vh 0px 0px 3% ;
-    border: 1px solid black;
+
+.movieName {
+    font-weight: bold;
+    font-size: 16px;
 }
+  
+.movieYear {
+margin-left: 10px;
+font-size: 14px;
+color: #e4d804;
+}
+  
+.movieQual {
+color: #e4d804;
+align-items: center;
+padding: 0px 10px;
+font-size: 11px;
+border: 2px solid white;
+}
+  
+.movieTime,
+.movieRated {
+display: flex;
+font-size: 12px;
+align-items: center;
+padding-left: 10px;
+color: #bcbcbc;
+}
+
+  
+.movieTime svg,
+  .movieRated svg {
+    margin-right: 10px;
+    color: #e4d804;
+    font-size: 12px;
+}
+  

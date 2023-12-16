@@ -1,17 +1,94 @@
-.movieList {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    
-}
 
-.upcomingMovie {
-    background-image: url("https://themebeyond.com/html/movflx/img/bg/ucm_bg_shape.png");
-    color: white;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-.upcomingMovie-section {
+.upcomingMovieSection {
     margin-top: 0px;
-    background-image: url("https://themebeyond.com/html/movflx/img/bg/ucm_bg.jpg");
+    background-color: rgba(0, 0, 0, 0.885);
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/ucm_bg_shape.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.ourServiceSection {
+    padding: 20vh 10% 20vh 10%;
+    display: flex;
+    color: white;
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/services_bg.jpg");
+  }
+  
+
+.ourServiceSection button {
+align-items: center;
+letter-spacing: 5px;
+background-color: #e4d804;
+color: #000;
+border-radius: 5px;
+margin: 40vh 5% 0px 2%;
+padding: 20px 35px;
+border: none;
+cursor: pointer;
+writing-mode: vertical-rl;
+}
+.ourServiceContainer {
+    align-items: center;
+    margin: auto;
+}
+.ourServiceContainer .title {
+    color: #e4e2e2;
+}
+
+.ourServiceContainer .subtitle {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+    max-width: 90%;
+}
+
+.serviceItem {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.serviceItem:hover .itemIcon {
+    background-color: #e4d804;
+}
+
+.serviceItem:hover .itemIcon svg {
+    color: #000;
+}
+
+.itemIcon {
+    border: 2px dashed #e4d804;
+    border-radius: 50%;
+    padding: 25px 28px;
+}
+
+.itemContent {
+    margin: 10px 0 ;
+}
+
+.itemTitle {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.itemDescription {
+    font-size: 14px;
+    font-weight: 500;
+    color: #bcbcbc;
+    line-height: 26px;
+}
+/*Top Rated Movies */
+.topRatedSection {
+    margin-top: 0px;
+    background-color: rgba(0, 0, 0, 0.885);
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/ucm_bg_shape.png");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+.topRatedSection .smallTitle, .bigTitle {
+    margin: auto;
+    align-items: center;
 }

@@ -26,3 +26,11 @@ export const getSessionId = async (url:any) => {
   };
 
  
+//fetch film
+
+export const fetchFilm = async (url:any) => {
+  return await axios
+    .get(url)
+    .then((response) => response.data)
+    .catch((response) => response.data);
+};

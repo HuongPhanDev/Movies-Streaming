@@ -1,28 +1,38 @@
 import React from 'react';
-import '../styles/MovieCard.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faThumbsUp } from '@fortawesome/free-regular-svg-icons';
+import { faClock, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
-const MovieCard = () => (
-  <div className='movieCard'>
-    <img src="./logo192.png" alt="" className='poster' />
-    <div>
-      <div className='movieName'>Name</div>
-      <div className='movieYear'>2021</div>
-    </div>
+interface MovieCardProps {
+  poster: string;
+  name: string;
+  year: string;
+  quality: string;
+  duration: number;
+  rating: number;
+}
 
-    <div>
-      <div className='movieQual'>HD</div>
+const MovieCard: React.FC<MovieCardProps> = ({ poster, name, year, quality, duration, rating }) => {
+  return (
+    <div className='movieCard'>
+      <img src={poster} alt="" className='poster' />
       <div>
-        <div className='movieTime'>
-          <FontAwesomeIcon icon={faClock} style={{ color: "#e4d804" }} /> 120 minutes
-        </div>
-        <div className='movieRated'>
-          <FontAwesomeIcon icon={faThumbsUp} style={{ color: "#e4d804" }} /> 3.5
+        <div className='movieName'>{name}</div>
+        <div className='movieYear'>{year}</div>
+      </div>
+
+      <div>
+        <div className='movieQual'>{quality}</div>
+        <div>
+          <div className='movieTime'>
+            <FontAwesomeIcon icon={faClock} /> {duration} minutes
+          </div>
+          <div className='movieRated'>
+            <FontAwesomeIcon icon={faThumbsUp} /> {rating}
+          </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default MovieCard;
