@@ -8,8 +8,10 @@
     background-repeat: no-repeat; 
 }
 
+/* ourServiceSection */
+
 .ourServiceSection {
-    padding: 20vh 10% 20vh 10%;
+    padding: 20vh 7%;
     display: flex;
     color: white;
     background-image: url("https://themebeyond.com/html/movflx/img/bg/services_bg.jpg");
@@ -88,7 +90,126 @@ writing-mode: vertical-rl;
     background-repeat: no-repeat; 
 }
 
-.topRatedSection .smallTitle, .bigTitle {
-    margin: auto;
+.topRatedSection .smallTitle {
+    text-align: center;
+}
+.topRatedSection .bigTitle {
+    text-align: center;
+}
+/* .introSection */
+.introSection {
+    display: flex;
+    padding: 20vh 7%;
+}
+.introSection .title {
+    color: #1e1b29;
+}
+
+.introSection .subtitle {
+    color: #1e1b29;
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 1.2;
+    max-width: 90%;
+
+}
+.introSection  p {
+    font-size: 14px;
+    color: #6a6a6a;
+    max-width: 80%;
+    font-weight: 600;
+}
+
+.introSection img {
+    max-width: 50%;
+}
+
+.introSection .buttonCommon {
+    background-color: #e4d804;
+}
+.introSection .buttonCommon a {
+    color: #1e1b29;
+}
+.introSection .buttonCommon:hover  {
+    background-color: white;
+    border: 2px solid #e4d804;
+}
+
+.introSection .vidOptions {
+    display: flex;
     align-items: center;
+    gap: 7%;
+}
+
+.vidOptions .resolution {
+    font-size: 60px;
+    color: white;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-color: #d81c2b;
+    -webkit-text-stroke-width: 2px;
+    text-shadow:0px 3px 24px rgba(160, 160, 160, 0.09);
+}
+
+.vidOptions .cusCount {
+    font-size: 36px;
+    color: #1e1b29;
+    line-height: .8;
+    margin-bottom: 5px;
+    font-weight: 900;
+    text-shadow: 0px 3px 4px rgba(30, 30, 30, 0.18);
+
+}
+
+.vidOptions .cusStatus {
+    font-size: 16px;
+    font-weight: 900;
+    color: #1e1b29;    
+}
+
+/* best TV series */
+
+.bestTVSeries {
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/tv_series_bg.jpg");
+}
+
+.bestTVSeries .movieSection .smallTitle {
+    text-align: center;
+}
+
+.bestTVSeries .movieSection .bigTitle {
+    text-align: center;
+}
+/* .getStartSection */
+.getStartSection {
+    display: flex;
+    padding: 5vh 0;
+    justify-content: space-around;
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/newsletter_bg.jpg");
+}
+
+.getStartSection .left div:first-child {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.getStartSection .left div:last-child {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.getStartSection .right {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+}
+
+.getStartSection .right input[type="text"] {
+    background-color: white;
+    width: 25rem;
+    padding: 15px 10px;
+}
+
+.getStartSection .right input[type="button"] {
+    background-color: #1e1b29;
+    color: #e4d804;
 }

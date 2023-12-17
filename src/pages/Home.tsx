@@ -6,6 +6,7 @@ import '../styles/MovieList.css'
 import '../styles/Home.css'
 import MovieList from '../components/MovieList'
 import Banner from '../components/Banner'
+import Btn from '../components/Btn';
 export default function Home() {
 
   interface SevicesItemProps {
@@ -114,7 +115,43 @@ export default function Home() {
       rating: 3.5,
     },
 
-  ]
+  ];
+
+  const bestTVSeries = [
+    {
+      poster: "https://themebeyond.com/html/movflx/img/poster/ucm_poster01.jpg",
+      name: "Women's Day",
+      year: "2021",
+      quality: "HD",
+      duration: 120,
+      rating: 3.5,
+    },
+    {
+      poster: "https://themebeyond.com/html/movflx/img/poster/ucm_poster05.jpg",
+      name: "The Cooking",
+      year: "2021",
+      quality: "HD",
+      duration: 120,
+      rating: 3.5,
+    },
+    {
+      poster: "https://themebeyond.com/html/movflx/img/poster/ucm_poster04.jpg",
+      name: "The Easy Reach",
+      year: "2021",
+      quality: "8K",
+      duration: 120,
+      rating: 3.5,
+    },
+    {
+      poster: "https://themebeyond.com/html/movflx/img/poster/ucm_poster03.jpg",
+      name: "The Dog  Woof",
+      year: "2021",
+      quality: "8K",
+      duration: 120,
+      rating: 3.5,
+    },
+  ];
+
   const ServiceItem: React.FC<SevicesItemProps> = ({ icon, title, content }) => {
   return (
     <div className="serviceItem">
@@ -152,6 +189,41 @@ export default function Home() {
 
     <section className='topRatedSection'>
       <MovieList movies={topRatedMovie} smallTitle='ONLINE STREAMING' bigTitle='Top Rated Movies' />
+    </section>
+
+
+    <section className='introSection'>
+      <div className="header">
+        <div className="title">ONLINE STREAMING</div>
+        <h2 className="subtitle">Live Movie & TV Shows For Friends & Family</h2>
+        <p className="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto, dolore dicta excepturi nisi quod numquam quis autem fugiat ipsum tenetur, atque neque dolorum corporis, animi sunt? Commodi corrupti reprehenderit doloremque?</p>
+        
+      <div className='vidOptions'>
+        <div className='resolution'>HD 4K</div>
+        <div className='cusInfo'>
+          <div className='cusCount'>20K+</div>
+          <div className='cusStatus'>Active Customer</div>
+        </div>
+      </div>
+
+        <Btn url='' title='WATCH NOW'/>
+      </div>
+      <img className="image" src="https://themebeyond.com/html/movflx/img/images/live_img.png " alt="" />
+    </section>
+
+    <section className='bestTVSeries'>
+      <MovieList movies={bestTVSeries} smallTitle='BEST TV SERIES' bigTitle='World Best TV Series' />
+    </section>
+
+    <section className='getStartSection'>
+      <div className='left'>
+        <div>TRIAL START FIRST 30 DAYS.</div>
+        <div>Enter your email to create or restart your membership.</div>
+      </div>
+      <div className='right'>
+        <input type="text" placeholder='Enter your email'/>
+        <input type="button" value="GET STARTED" />
+      </div>
     </section>
   </div>
   )
