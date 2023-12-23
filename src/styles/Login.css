@@ -9,7 +9,7 @@
     align-items: center;
 }
 
-form {
+.loginContainer form {
     display: flex;
     flex-direction: column;
     background-color: black;

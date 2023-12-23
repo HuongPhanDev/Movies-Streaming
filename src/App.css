@@ -1,7 +1,12 @@
 * {
   font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
 }
 
 html {
-  margin-top: 0px;
+  margin: 0;
+  padding: 0;
 }

@@ -12,7 +12,8 @@
     top: 40vh;
 }
 .bannerContainer h1 {
-    line-height: 0px;
+    margin: 0;
+    line-height: 10px;
     color: #e4d804;
     font-weight: 900;
     
@@ -23,6 +24,7 @@
 .bannerContainer p {
     font-size: 60px;
     width: 45%;
+    margin: 3vh 0;
     line-height: 10vh;
     font-weight: 900;
     color: white;

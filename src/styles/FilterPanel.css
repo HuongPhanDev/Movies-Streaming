@@ -1,0 +1,55 @@
+    .filterPanel {
+        width: 25%;
+        padding: 16px;
+        border-right: 1px solid #e4d804;
+      }
+      
+      select {
+        width: 100%;
+        margin-bottom: 16px;
+        padding: 8px;
+      }
+      
+      h2 {
+        margin-bottom: 8px;
+        color: white;
+      }
+      
+      .filterPanel ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      
+      .filterPanel li {
+        flex: 0 0 calc(33.333% - 8px); 
+        margin-bottom: 8px; 
+        box-sizing: border-box;
+        background-color: black;
+        color: white;
+        margin: 4px 4px;
+        padding: 10px 4px;
+        text-align: center;
+        border-radius: 20px;
+        border: 2px solid #e4d804
+      }
+      
+      select {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+      
+      .filterPanel select {
+        background-color: #fff;
+        background-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding-right: 32px; 
+        columns: 2; 
+        column-gap: 16px; 
+      }
+      
+    

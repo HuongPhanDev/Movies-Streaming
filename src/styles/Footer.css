@@ -1,0 +1,73 @@
+.footerContainer {
+    background-image: url("https://themebeyond.com/html/movflx/img/bg/footer_bg.jpg");
+}
+.footerContainer div:first-child{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.5px solid #000000;
+}
+
+.footer-logo {
+    max-width: auto;
+    height: 100px;
+}
+
+.footerContainer .nav {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerContainer .nav-item {
+    text-decoration: none;
+    color: #fff; 
+    font-weight: 700;
+    font-size: 14px;
+    }
+
+.footerContainer input {
+    max-width: 400px;
+    background-color: transparent;
+    border: none;
+    
+}
+
+.footerContainer form {
+    display: flex;
+    background-color:#12151e;
+    flex-direction: row;
+    border-radius: 30px;
+    padding: 0 20px ;
+}
+
+.footerContainer button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    color: #e4d804;
+}
+
+.footerContainer div:last-child {
+    margin-top: 2px;
+    padding: 5vh 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    align-self: center;
+    border-top: 0.1px solid #2d2d2d;
+}
+
+.footerContainer div:last-child ul{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    color: #bcbcbc;
+    font-size: 13px;
+    margin: 0 7% 0 5%;
+    font-weight: 500;
+    gap: 40px;
+}

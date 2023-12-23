@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import '../styles/Login.css'
 import { authorize, getSessionId, requestToken } from '../api/Api';
 import { useNavigate } from 'react-router-dom';
+import { useContext } from 'react';
+import { LoginContext } from '../App';
 
 export default function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigate();
+  const { setIsLoggedIn } = useContext(LoginContext)!; 
+
 
   const fetchData = async () => {
     try {
@@ -22,7 +26,12 @@ export default function Login() {
       const sessionIdResponse = await getSessionId("https://api.themoviedb.org/3/authentication/session/new?api_key=e625e669aa1fa4c29e259bda1eae49a7&request_token=" + tokenResponse.request_token);
       console.log("Session ID Response:", sessionIdResponse);
       if (sessionIdResponse.success) {
-        sessionStorage.setItem('isLoggedIn', 'true');
+        const userInformation = {
+          username, 
+          request_token: tokenResponse.request_token,
+        };
+        sessionStorage.setItem('user_info', JSON.stringify(userInformation));
+        setIsLoggedIn(true);
         alert("Bạn đã đăng nhập thành công!")
         navigation('/');
       }

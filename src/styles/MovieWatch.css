@@ -1,0 +1,35 @@
+.movieWatchContainer {
+    padding: 100px 10%;
+    background-image: url('https://themebeyond.com/html/movflx/img/bg/movie_details_bg.jpg');
+}
+
+.video {
+    width: 100%;
+    height: 70vh;
+}
+
+.episodeList {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3% 20px 0;
+    margin-top: 10vh;
+}
+.episodeList ul {
+    width: 60%;
+    border: 2px solid #e4d804;
+    background-color: black;
+
+}
+.episodeList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    list-style-type: none;
+    border-bottom: 1px solid #242426;
+}
+
+.episodeList li a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+}

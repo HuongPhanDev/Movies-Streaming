@@ -1,0 +1,14 @@
+.ourMovieContainer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.ourMovieContent {
+    display: flex;
+    justify-content: space-between;
+    background-image: url('https://themebeyond.com/html/movflx/img/bg/movie_bg.jpg');
+}
+
+.ourMovieContent .movieSection {
+    width: 63%;
+}

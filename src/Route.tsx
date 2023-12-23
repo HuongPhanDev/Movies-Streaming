@@ -8,6 +8,9 @@ import TVShow from './pages/TVShow';
 import Login from './pages/Login';
 import PrivateRoute from './PrivateRouter';
 import { useState, useEffect} from 'react';
+import MovieWatch from './pages/MovieWatch';
+import MovieList from './components/MovieList';
+import MovieDetail from './pages/MovieDetail';
 
 
 // const isLoggedIn = sessionStorage.getItem('isLoggedIn') == 'true';
@@ -21,9 +24,11 @@ const UserRoutes = [
     { path: "/tvshow", element: <TVShow/>, isPrivate: false},
     { path: "/contact", element: <Contact/>, isPrivate: false},
     { path: "/pricing", element: <Pricing/>, isPrivate: false},
+    { path: '/movie-watch', element: <MovieWatch/>, isPrivate: true },
+    { path: '/movie-detail/:id', element: <MovieDetail/>, isPrivate: true}
 ]
 
-
+// useMemo, redux
 
 export const routes = {
     UserRoutes

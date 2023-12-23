@@ -9,7 +9,10 @@
 }
 
 /* ourServiceSection */
-
+.paragraph {
+    font-size: 14px;
+    margin-bottom: 2vh;
+}
 .ourServiceSection {
     padding: 20vh 7%;
     display: flex;
@@ -36,6 +39,7 @@ writing-mode: vertical-rl;
 }
 .ourServiceContainer .title {
     color: #e4e2e2;
+    margin-bottom: 2vh;
 }
 
 .ourServiceContainer .subtitle {
@@ -43,6 +47,7 @@ writing-mode: vertical-rl;
     font-weight: 900;
     line-height: 1.2;
     max-width: 90%;
+    margin-bottom: 2vh;
 }
 
 .serviceItem {
@@ -103,6 +108,8 @@ writing-mode: vertical-rl;
 }
 .introSection .title {
     color: #1e1b29;
+    margin-bottom: 2vh;
+
 }
 
 .introSection .subtitle {
@@ -111,6 +118,8 @@ writing-mode: vertical-rl;
     font-weight: 900;
     line-height: 1.2;
     max-width: 90%;
+    margin-bottom: 2vh;
+
 
 }
 .introSection  p {

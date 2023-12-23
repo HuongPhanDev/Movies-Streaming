@@ -1,15 +1,17 @@
-
-import React, { useEffect, useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
-import '../styles/Header.css';
-import { useLocation } from 'react-router-dom';
+import React, { useEffect, useContext } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSignOutAlt, faUser } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/imgs/logo.png';
 import Btn from './Btn';
-import { useNavigate } from 'react-router-dom';
+import Nav from './Nav';
+import { LoginContext } from '../App';
+import '../styles/Header.css'
 
-export default function Header() {
+const Header: React.FC = () => {
   const location = useLocation();
   const navigation = useNavigate();
+  const { isLoggedIn, setIsLoggedIn } = useContext(LoginContext)!;
 
   const getLinkStyle = (path: string) => ({
     color: location.pathname === path ? '#e4d804' : 'white',
@@ -21,7 +23,7 @@ export default function Header() {
 
     const handleScroll = () => {
       const currentScroll = window.scrollY;
-      
+
       if (currentScroll > 150) {
         header.classList.add(toggleClass);
       } else {
@@ -34,41 +36,34 @@ export default function Header() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-    
-  const Logout = () => {
-    sessionStorage.removeItem('isLoggedIn');
+
+  const handleLogout = () => {
+    sessionStorage.removeItem('user_info');
+    setIsLoggedIn(false);
     navigation('/login');
-  }
- 
-  
+  };
+
   return (
     <div id="sticky-header" className='header-container'>
       <img src={logo} alt="movies dream logo" className="header-logo" />
-      <nav>
-        <ul className="header-nav">
-          <li >
-            <NavLink to={"/"} className={"header-nav-item"} style={getLinkStyle('/')}>HOME</NavLink>
-          </li>
-          <li >
-            <NavLink to={"/movie"} className="header-nav-item" style={getLinkStyle('/movie')}>MOVIE</NavLink>
-          </li>
-          <li >
-            <NavLink to={"/tvshow"} className="header-nav-item" style={getLinkStyle('/tvshow')}>TV SHOW</NavLink>
-          </li>
-          <li >
-            <NavLink to={"/pricing"} className="header-nav-item" style={getLinkStyle('/pricing')}>PRICING</NavLink>
-          </li>
-          <li >
-            <NavLink to={"/blog"} className="header-nav-item" style={getLinkStyle('/blog')}>BLOG</NavLink>
-          </li>
-          <li >
-            <NavLink to={"/contact"} className="header-nav-item" style={getLinkStyle('/contact')}>CONTACT</NavLink>
-          </li>
-        </ul>
-      </nav>
+      <Nav getLinkStyle={getLinkStyle} />
       <div className='header-right'>
-          <Btn title="SIGN IN" url='/login'/>
+        {!isLoggedIn ? (
+          <Btn title="SIGN IN" url='/login' />
+        ) : (
+          <div>
+            <FontAwesomeIcon icon={faUser} />
+            <span style={{ color: 'white', margin: '0 10px' }}>
+              {JSON.parse(sessionStorage.getItem('user_info') || '{}').username}
+            </span>
+            <button onClick={handleLogout} className='logoutBtn'>
+              <FontAwesomeIcon icon={faSignOutAlt} />
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
-}
+};
+
+export default Header;

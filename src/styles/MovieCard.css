@@ -1,39 +1,42 @@
 .movieCard {
+    max-width: 22%;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
     color: white;
+    position: relative;
     border-radius: 8px;
   }
 .movieCard div {
     display: flex;
     justify-content: space-between;
     margin-top: 5px;
+
 }
 
 .poster {
 width: 100%; 
 height: auto;
-margin-right: 10px;
 border-radius: 5px;
+
 }
 
 .movieName {
-    font-weight: bold;
-    font-size: 16px;
+  font-weight: bold;
+  font-size: 16px;
 }
   
 .movieYear {
-margin-left: 10px;
 font-size: 14px;
 color: #e4d804;
 }
   
-.movieQual {
+.movieLan {
 color: #e4d804;
 align-items: center;
 padding: 0px 10px;
 font-size: 11px;
+text-transform: uppercase;
 border: 2px solid white;
 }
   
@@ -54,3 +57,60 @@ color: #bcbcbc;
     font-size: 12px;
 }
   
+.overlayContent {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  align-self: center;
+  visibility: hidden;
+  z-index: 1;
+  background-color: #00000071;
+  width: 94%;
+  top: 10px;
+  height: 81.3%;
+  
+}
+
+.movieCard:hover .overlayContent {
+  visibility: visible;
+  z-index: 2;
+}
+
+
+.starRating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #e4d804;
+  padding: 50% 35% 0 35%;
+}
+
+.starRating span {
+  margin: 0;
+  font-size: 20px;
+}
+
+.movieActions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 10px;
+  padding: 0 30% 50% 30%;
+
+}
+
+.actionButton {
+  padding: 8px 16px;
+  border-radius: 15px;
+  font-weight: 600;
+  margin: 8px 0;
+  background-color: #e4d804;
+  color: #000;
+  border: none;
+  cursor: pointer;
+}
+
+.actionButton:hover {
+  background-color: #333;
+}

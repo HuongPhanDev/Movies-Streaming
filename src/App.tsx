@@ -1,43 +1,48 @@
-import React from 'react';
-import './App.css';
+import React, { createContext, useState } from 'react';
 import Layout from './Layout';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { routes } from './Route';
-import PrivateRoute from './PrivateRouter';
-import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-function App() {
-  
-  const [isLoggedIn,setIsLoggedIn] = useState(true);
 
-  setTimeout(() => {
-    setIsLoggedIn(false)
-  }, 5000);
+interface LoginContextType {
+  isLoggedIn: boolean;
+  setIsLoggedIn: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
-  console.log("hi");
-  
-  // useEffect ( () => {
-  //   if (sessionStorage.getItem('isLoggedIn') === 'true') {
-  //     setIsLoggedIn(f)
-      
-  // }
-  // }) 
+export const LoginContext = createContext<LoginContextType | undefined>(undefined);
 
+const App: React.FC = () => {
+  const testIsLoggedIn = !!sessionStorage.getItem('user_info');
+  const [isLoggedIn, setIsLoggedIn] = useState(testIsLoggedIn);
 
+  const contextValue: LoginContextType = {
+    isLoggedIn,
+    setIsLoggedIn,
+  };
+
+  console.log(isLoggedIn);
   
   return (
-    <>
-    <Router>
-      <Layout/>
+    <LoginContext.Provider value={contextValue}>
+      <Router>
+        <Layout />
         <Routes>
-          {routes.UserRoutes.map((route: any) => (
-              <Route key={route.path} path={route.path} element= {isLoggedIn != true && route.isPrivate == true  ? <Navigate to={'/login'}/> : route.element }/>
-            ))}
+          {routes.UserRoutes.map((route) => (
+            <Route
+              key={route.path}
+              path={route.path}
+              element={
+                route.isPrivate && !isLoggedIn ? (
+                  <Navigate to="/login" />
+                ) : (
+                  route.element
+                )
+              }
+            />
+          ))}
         </Routes>
-    </Router>
-    </>
+      </Router>
+    </LoginContext.Provider>
   );
-}
+};
 
 export default App;
