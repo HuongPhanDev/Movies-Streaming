@@ -1,7 +1,6 @@
     .filterPanel {
-        width: 25%;
-        padding: 16px;
-        border-right: 1px solid #e4d804;
+        max-width: 350px;
+        padding: 5vh 0 0 4%;
       }
       
       select {
@@ -11,7 +10,6 @@
       }
       
       h2 {
-        margin-bottom: 8px;
         color: white;
       }
       
@@ -30,6 +28,7 @@
         background-color: black;
         color: white;
         margin: 4px 4px;
+        font-size: 12px;
         padding: 10px 4px;
         text-align: center;
         border-radius: 20px;

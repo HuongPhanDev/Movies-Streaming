@@ -4,7 +4,11 @@ import { fetchFilm } from '../api/Api';
 import '../styles/MovieDetail.css';
 import Banner from '../components/Banner';
 import BannerTwo from '../components/BannerTwo';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faClock, faComment, faThumbsUp, faUser } from '@fortawesome/free-regular-svg-icons';
+import Btn from '../components/Btn';
+import Footer from '../components/Footer';
+import MovieList from '../components/MovieList';
 const MovieDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const [movieDetails, setMovieDetails] = useState<any | null>(null);
@@ -38,22 +42,28 @@ const MovieDetail: React.FC = () => {
   } = movieDetails;
 
   return (
-    <div>
-        <BannerTwo children={<div className="movieDetailContainer">
-            <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title} className="movieImage" />
+    <>
+    <div className='movieDetailContainer'>
+      <img src={`https://image.tmdb.org/t/p/w500/${poster_path}`} alt={title} className="movieImage" />
 
-            <div className="movieDetails">
-                <h1 className="movieTitle">{title}</h1>
-                <p>Release Date: {release_date}</p>
-                <p>Language: {original_language}</p>
-                <p>Overview: {overview}</p>
-                <p>Popularity: {popularity}</p>
-                <p>Vote Average: {vote_average}</p>
-                <p>Vote Count: {vote_count}</p>
-            </div>
-        </div>} />
-        
+      <div className="movieDetails">
+          <h1 className="movieTitle">{title}</h1>
+          <p>Release Date: {release_date}</p>
+          <p>Language: English</p>
+          <p>Overview: {overview}</p>
+         
+          <div className='movieMedia'>
+            <p><FontAwesomeIcon icon={faThumbsUp} color="#e4d804" />{vote_average}</p>
+            <p><FontAwesomeIcon icon={faComment} color="#e4d804" /> {vote_count}</p>
+          </div>
+
+          <Btn title={'Watch Now'}  url=''/>
+      </div>
     </div>
+
+    <Footer />
+    </>
+    
     
   );
 };

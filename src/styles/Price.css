@@ -1,0 +1,39 @@
+.priceSection h1{
+    margin:0;
+    padding: 0;
+}
+.priceSection {
+    overflow: hidden;
+}
+.priceContainer {
+    overflow: hidden;
+    padding: 0 12%;
+    color: white;
+    background-image: url('https://themebeyond.com/html/movflx/img/bg/pricing_bg.jpg');
+}
+.listPrice {
+    display: flex;
+    gap: 30px;
+    margin: 10vh 0 25vh 0;
+}
+
+.priceContainer .title {
+    text-align: center;
+    margin: 10vh 0  ;
+}
+
+.priceContainer .title h1,h4 {
+    margin: 0;
+}
+
+.priceContainer .title h4 {
+    color: #bcbcbc;
+    font-weight: 700;
+}
+
+.priceContainer .title div {
+    width: 98px;
+    height: 7px;
+    margin: 5vh auto;
+    background-image: url('https://themebeyond.com/html/movflx/img/images/title_shape.png');
+}

@@ -1,17 +1,19 @@
 .movieSection {
-    padding: 10vh;
+    padding: 10vh 0;
 }
 
 .smallTitle {
     color: #e4d804;
     font-size: 13px;
     font-weight: 500;
+    padding:0 0 0 5%;
     letter-spacing: 1px;
 }
 
 .bigTitle {
     font-size: 36px;
     font-weight: 900;
+    padding:0 0 0 5%;
     color: white;
     font-style: normal;
 }

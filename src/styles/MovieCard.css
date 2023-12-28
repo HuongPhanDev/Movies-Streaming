@@ -1,5 +1,6 @@
 .movieCard {
-    max-width: 22%;
+    max-width: 303px;
+    height: 550px;
     align-items: center;
     justify-content: space-between;
     padding: 10px;
@@ -7,6 +8,7 @@
     position: relative;
     border-radius: 8px;
   }
+
 .movieCard div {
     display: flex;
     justify-content: space-between;
@@ -15,7 +17,7 @@
 }
 
 .poster {
-width: 100%; 
+width: 303px; 
 height: auto;
 border-radius: 5px;
 

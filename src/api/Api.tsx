@@ -7,7 +7,11 @@ export const fetchData = async (url:string) => {
     return await axios
       .get(url)
       .then((response) => response.data)
-      .catch((response) => response.data);
+      .catch((error) => {
+        console.error('Error fetching data:', error);
+        throw error; 
+      });
+  
   };
 
 export const authorize = async (url: string, username: string, password: string, requestToken: any) => {

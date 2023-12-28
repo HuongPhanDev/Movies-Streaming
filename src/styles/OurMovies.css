@@ -5,10 +5,12 @@
 
 .ourMovieContent {
     display: flex;
-    justify-content: space-between;
+    padding: 0 0 0 0;
     background-image: url('https://themebeyond.com/html/movflx/img/bg/movie_bg.jpg');
 }
 
 .ourMovieContent .movieSection {
-    width: 63%;
+    width: 70%;
+    padding: 5vh 0 0 1%;
+    text-align: center;
 }

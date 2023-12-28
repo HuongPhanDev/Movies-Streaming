@@ -1,0 +1,140 @@
+.blog-poster-container {
+    background-color: #1f1e24;
+    color: white;
+    width: 830px;
+   
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.46);
+}
+.blog-poster-container:not(:last-child) {
+    margin-bottom: 50px;
+}
+.blog-poster-container img {
+    width: 100%;
+    height: auto;
+}
+
+.blog-poster-container .blog-poster-content {
+    padding: 5vh 4%;
+}
+
+.blog-poster-content .date {
+    align-items: center;
+    font-size: 14px;
+    color: #bcbcbc;
+    font-weight: 500;
+}
+
+.blog-poster-content .date svg {
+    margin: 0 5px 0 0;
+    font-size: 15px;
+}
+.blog-poster-content p {
+    font-size: 15px;
+    color: #bcbcbc;
+    font-weight: 500;
+    padding-bottom: 5vh;
+    border-bottom: 2px solid #000000;
+}
+
+.blog-poster-media ul{
+    list-style-type: none;
+    display: flex;
+    padding: 0 ;
+    gap: 20px;
+    font-size: 13px;
+    color: #bcbcbc;
+    font-weight: 500;
+}
+
+.blog-poster-media ul li:not(:last-child)::after {
+    content: '|';
+    margin-left: 20px;
+    color: #bcbcbc;
+} 
+.blog-poster-media ul li:first-child {
+    margin-left:0 ;
+}
+
+.blog-poster-media {
+    display: flex;
+    padding: 0;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.blog-poster-media .read-more a {
+    color: #e4d804;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.blog-poster-media .read-more svg {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.blog-poster {
+    margin: 0;
+    display: flex;
+    padding: 20vh 7%;   
+    background-image: url('https://themebeyond.com/html/movflx/img/bg/blog_bg.jpg');
+}
+
+.blogRightSide {
+    margin: 0 6%
+}
+.searchBox, .categoryBox {
+    background-color: #1f1e24;
+    color: white;
+    width: 390px;
+    margin-bottom: 5vh;
+    padding: 2vh 1% 4vh;
+    box-shadow: 0px 1px 7px 0px rgba(0, 0, 0, 0.46);
+}
+.blogRightSide h2 {
+    position: relative;
+    left: 7%;
+  }
+  .blogRightSide h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    left: 0;
+    width: 10%;
+    height: 4px;
+    background-color: #e4d804;
+  }
+  .searchBox form {
+    display: flex;
+    align-items: center;
+    padding: 0 7%;
+  }
+  .searchBox input {
+    background-color: #393939;
+    width: 70%;
+    border: none;
+    border-radius: 0;
+    padding: 2.5vh 10px;
+  }
+
+  .searchBox button {
+    background-color: #e4d804;
+    padding: 2.5vh 20px;
+    border: none;
+
+  }
+
+.categoryBox ul {
+    margin: 0;
+    padding: 0;
+}
+
+.categoryItem {
+    margin: 10px 7%;
+    display: flex;
+    color: #c8c8c8;
+    padding: 10px 0 20px;
+    justify-content: space-between;
+    border-bottom: 1px dashed #c8c8c8;
+}
